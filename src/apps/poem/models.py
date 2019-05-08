@@ -14,6 +14,7 @@ class AuthorModel(models.Model):
     def __str__(self):
         return self.name
 
+
 class PoemModel(models.Model):
 
     class Meta:
@@ -25,6 +26,7 @@ class PoemModel(models.Model):
     paragraphs = models.CharField(null=False, default="", max_length=128, verbose_name="诗歌正文")
     strains = models.CharField(null=False, default="", max_length=128, verbose_name="唱法")
     dynasty = models.CharField(null=False, default="", max_length=128, verbose_name="朝代")
+    audio = models.FileField(verbose_name="诗歌朗读文件", null=True)
 
     def __str__(self):
         return self.title

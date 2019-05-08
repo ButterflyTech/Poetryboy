@@ -8,6 +8,7 @@
 #  @author iflytek
 import base64
 import hashlib
+import json
 import time
 
 import requests
@@ -27,6 +28,14 @@ def getHeader():
     curTime = str(int(time.time()))
     # ttp=ssml
     param = "{\"aue\":\"" + AUE + "\",\"auf\":\"audio/L16;rate=16000\",\"voice_name\":\"x_xiaofeng\",\"engine_type\":\"intp65\"}"
+    param = {
+        "aue": AUE,
+        "auf": "audio/L16;rate=16000",
+        "voice_name": "x_xiaofeng",
+        "engine_type": "intp65",
+        "speed": "45",
+    }
+    param = json.dumps(param)
     print("param:{}".format(param))
 
     paramBase64 = str(base64.b64encode(param.encode('utf-8')), 'utf-8')
