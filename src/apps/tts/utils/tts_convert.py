@@ -1,6 +1,7 @@
 import base64
 import hashlib
 import json
+import os
 import time
 
 import requests
@@ -70,6 +71,7 @@ class TTSConvert:
                 tts_path = "audio/" + sid + ".wav"
                 self.write_file(tts_path, r.content)
                 audio_path = combined_audio(tts_path, "audio/bgm1.mp3", poem_id)
+                os.remove(tts_path)
                 return audio_path
             else:
                 # print(r.content)
