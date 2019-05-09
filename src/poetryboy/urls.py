@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from apps.poem.apis import RandomPoemView
+from apps.poem.apis import RandomPoemView, PoemAudioView
 
 router = routers.DefaultRouter()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/v1/', include(router.urls)),
-    url(r'^give_me_poem/', RandomPoemView.as_view())
+    url(r'^give_me_poem/', RandomPoemView.as_view()),
+    url(r'^give_me_audio/(?P<id>\d+)/', PoemAudioView.as_view())
 ]

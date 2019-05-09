@@ -23,7 +23,8 @@ class TTSConvert:
         param = {
             "aue": self.AUE,
             "auf": "audio/L16;rate=16000",
-            "voice_name": "x_xiaofeng",
+            # "voice_name": "x_xiaofeng",
+            "voice_name": "x_mengmengneutral",
             "engine_type": "intp65",
             "speed": "45",
         }

@@ -1,0 +1,7 @@
+version: '2'
+services:
+    poetryboy-backend:
+        image: poetryboy:latest
+        restart: always
+    nginx:
+        image: nginx:latest
