@@ -13,9 +13,19 @@
 cd src/
 ./manager.py runserver
 ```
+
+- 访问后端管理添加申请的讯飞语音合成AppID与AppSecret
+访问 http://localhost:8000/admin
+```
+默认用户名密码
+admin
+admin123
+```
+
 - 前端
 ```
 cd /ui
 npm run serve
 ```
 访问 http://localhost:8080
+
