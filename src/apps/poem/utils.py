@@ -25,9 +25,9 @@ def read_poem_2_db(path):
         dynasty = ""
 
         if "song" in file:
-            dynasty = "宋朝"
+            dynasty = "宋"
         elif "tang" in file:
-            dynasty = "唐代"
+            dynasty = "唐"
         else:
             pass
 
