@@ -4,6 +4,8 @@ services:
         image: poetryboy:latest
         restart: always
         command: gunicorn poetryboy.wsgi -w 4 -b 0.0.0.0:8000
+        environment:
+          DEBUG: 1
     nginx:
         image: nginx:latest
         depends_on:
