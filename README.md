@@ -1,5 +1,10 @@
 # Poetryboy(诗童)
 诗童是一个人随机挑选一首唐诗宋词，配上背景音乐朗读。
+#### 示例
+- 示例1
+![示例１](./images/1.png)
+- 示例2
+![示例2](./images/2.png)
 
 #### 技术架构
 - 后端: [Django](https://www.djangoproject.com/)
@@ -34,8 +39,3 @@ npm run serve
 sudo ./buildDocker.sh
 docker-compose up
 ```
-#### 示例
-- 示例1
-![示例１](./images/1.png)
-- 示例2
-![示例2](./images/2.png)
