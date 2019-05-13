@@ -39,3 +39,4 @@ npm run serve
 sudo ./buildDocker.sh
 docker-compose up
 ```
+访问 http://localhost:8080
