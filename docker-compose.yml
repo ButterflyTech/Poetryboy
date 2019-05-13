@@ -3,5 +3,13 @@ services:
     poetryboy-backend:
         image: poetryboy:latest
         restart: always
+        command: gunicorn poetryboy.wsgi -w 4 -b 0.0.0.0:8000
     nginx:
         image: nginx:latest
+        depends_on:
+          - poetryboy-backend
+        volumes:
+          - ./ui/dist/:/ui
+          - ./nginx.conf:/etc/nginx/conf.d/poetryboy.conf
+        ports:
+          - 8080:8080
