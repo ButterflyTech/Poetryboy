@@ -4,7 +4,7 @@
 - 示例1
 ![示例１](./images/1.png)
 - 示例2
-![示例2](./images/2.png)
+![示例2](./images/3.png)
 
 #### 技术架构
 - 后端: [Django](https://www.djangoproject.com/)
